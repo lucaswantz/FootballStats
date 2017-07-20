@@ -27,11 +27,11 @@
               <MenuItem fx:id="menuItemGraficosVendasPorMes" mnemonicParsing="false" text="Vendas por Mês" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="Relatórios">
-               <items>
-                  <MenuItem fx:id="menuItemRelatoriosQuantidadeProdutosEstoque" mnemonicParsing="false" text="Quantidade de Produtos em Estoque" />
-               </items>
-            </Menu>
+          <Menu mnemonicParsing="false" text="Relatórios">
+             <items>
+                <MenuItem fx:id="menuItemRelatoriosQuantidadeProdutosEstoque" mnemonicParsing="false" text="Quantidade de Produtos em Estoque" />
+             </items>
+          </Menu>
         </menus>
       </MenuBar>
       <AnchorPane fx:id="anchorPane" prefHeight="387.0" prefWidth="600.0" />
