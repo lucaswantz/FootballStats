@@ -4,6 +4,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,12 +12,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafxmvc.model.dao.ClienteDAO;
 import javafxmvc.model.database.Database;
 import javafxmvc.model.database.DatabaseFactory;
 import javafxmvc.model.domain.Cliente;
 
-public class FXMLAchorPaneCadastroClientesController implements Initializable {
+public class FXMLAnchorPaneCadastroClientesController implements Initializable {
 
     @FXML
     private TableView<Cliente> tableViewClientes;
@@ -48,7 +50,18 @@ public class FXMLAchorPaneCadastroClientesController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        clienteDAO.setConnection(connection);
+        carregarTableViewCliente();
     }    
+    
+    public void carregarTableViewCliente(){
+        tableColumnClienteNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        tableColumnClienteCPF.setCellValueFactory(new PropertyValueFactory<>("cpf"));
+        
+        listClientes = clienteDAO.listar();
+        
+        observableListClientes = FXCollections.observableArrayList(listClientes);
+        tableViewClientes.setItems(observableListClientes);
+    }
     
 }
