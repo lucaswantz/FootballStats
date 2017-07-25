@@ -11,4 +11,21 @@ package footballstats.model.domain;
  */
 public class Atleta {
     
+    private int codigo;
+    private String nomeCompleto;
+    private String apelido;
+    private String cpf;
+    private String rg;
+    private String dataDeNascimento;
+    private Cidade cidadeNascimento;
+    private String nomePai;
+    private String nomeMae;
+    private char sexo;
+    private char estadoCivil;
+    private Endereco endereco;
+    private String email;
+    private String telefone;
+    private String celular;
+    
+    
 }
