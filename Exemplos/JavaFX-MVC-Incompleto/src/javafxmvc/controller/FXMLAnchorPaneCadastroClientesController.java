@@ -52,6 +52,10 @@ public class FXMLAnchorPaneCadastroClientesController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         clienteDAO.setConnection(connection);
         carregarTableViewCliente();
+        
+        // Listen acionado diante de quaisquer atlerações na seleção de itens da TableView
+        tableViewClientes.getSelectionModel().selectedItemProperty().addListener(
+            (observable, oldValue, newValue) -> selecionarItemTableViewClientes(newValue));
     }    
     
     public void carregarTableViewCliente(){
@@ -62,6 +66,20 @@ public class FXMLAnchorPaneCadastroClientesController implements Initializable {
         
         observableListClientes = FXCollections.observableArrayList(listClientes);
         tableViewClientes.setItems(observableListClientes);
+    }
+
+    private void selecionarItemTableViewClientes(Cliente cliente) {
+        if (cliente != null){
+            labelClienteCodigo.setText(String.valueOf(cliente.getCdCliente()));
+            labelClienteNome.setText(cliente.getNome());
+            labelClienteCPF.setText(cliente.getCpf());
+            labelClienteTelefone.setText(cliente.getTelefone());            
+        } else {
+            labelClienteCodigo.setText("");
+            labelClienteNome.setText("");
+            labelClienteCPF.setText("");
+            labelClienteTelefone.setText("");
+        }
     }
     
 }

@@ -44,13 +44,13 @@
                     </rowConstraints>
                      <children>
                         <Label text="Codigo" />
-                        <Label fx:id="labelClienteCodigo" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="labelClienteCodigo" GridPane.columnIndex="1" />
                         <Label text="Nome" GridPane.rowIndex="1" />
                         <Label text="CPF" GridPane.rowIndex="2" />
                         <Label text="Telefone" GridPane.rowIndex="3" />
-                        <Label fx:id="labelClienteNome" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="labelClienteCPF" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label fx:id="labelClienteTelefone" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="labelClienteNome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelClienteCPF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="labelClienteTelefone" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
                   <Group layoutX="71.0" layoutY="44.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
