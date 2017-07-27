@@ -60,6 +60,9 @@ public class FXMLAnchorPaneCadastroClientesDialogController implements Initializ
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+        this.textFieldClienteNome.setText(cliente.getNome());
+        this.textFieldClienteCPF.setText(cliente.getCpf());
+        this.textFieldClienteTelefone.setText(cliente.getTelefone());
     }
 
     @FXML
@@ -69,6 +72,11 @@ public class FXMLAnchorPaneCadastroClientesDialogController implements Initializ
         cliente.setTelefone(textFieldClienteTelefone.getText());
         
         buttonConfirmarClicked = true;
+        dialogStage.close();
+    }
+    
+    @FXML
+    public void handleButtonCancelar() {
         dialogStage.close();
     }
 }

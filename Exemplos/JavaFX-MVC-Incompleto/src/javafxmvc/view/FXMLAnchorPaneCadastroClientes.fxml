@@ -55,9 +55,9 @@
                   </GridPane>
                   <Group layoutX="71.0" layoutY="44.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
                      <children>
-                        <Button fx:id="buttonAlterar" layoutX="132.0" layoutY="301.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Alterar" />
-                        <Button fx:id="buttonInserir" layoutX="51.0" layoutY="301.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Inserir" />
-                        <Button fx:id="buttonRemover" layoutX="214.0" layoutY="301.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Remover" />
+                        <Button fx:id="buttonAlterar" layoutX="132.0" layoutY="301.0" mnemonicParsing="false" onAction="#handleButtonAlterar" prefHeight="25.0" prefWidth="64.0" text="Alterar" />
+                        <Button fx:id="buttonInserir" layoutX="51.0" layoutY="301.0" mnemonicParsing="false" onAction="#handleButtonInserir" prefHeight="25.0" prefWidth="64.0" text="Inserir" />
+                        <Button fx:id="buttonRemover" layoutX="214.0" layoutY="301.0" mnemonicParsing="false" onAction="#handleButtonRemover" prefHeight="25.0" prefWidth="64.0" text="Remover" />
                      </children>
                   </Group>
                </children></AnchorPane>

@@ -26,6 +26,5 @@ public class Atleta {
     private String email;
     private String telefone;
     private String celular;
-    
-    
+        
 }

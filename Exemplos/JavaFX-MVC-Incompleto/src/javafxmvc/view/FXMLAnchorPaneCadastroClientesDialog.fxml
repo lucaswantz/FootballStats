@@ -29,8 +29,8 @@
       </GridPane>
       <Group AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
          <children>
-            <Button fx:id="buttonCancelar" layoutX="192.0" layoutY="135.0" mnemonicParsing="false" text="Cancelar" />
-            <Button fx:id="buttonConfirmar" layoutX="107.0" layoutY="135.0" mnemonicParsing="false" text="Confirmar" />
+            <Button fx:id="buttonCancelar" layoutX="192.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleButtonCancelar" text="Cancelar" />
+            <Button fx:id="buttonConfirmar" layoutX="107.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleButtonConfirmar" text="Confirmar" />
          </children>
       </Group>
    </children>
